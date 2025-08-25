@@ -1,31 +1,78 @@
-import Link from "next/link";
-import { type SanityDocument } from "next-sanity";
 
-import { client } from "@/sanity/client";
+import About from "@/components/custom/about";
+import RotatingFlower from "@/components/custom/chunks/rotatating-flower";
+import { TimelineSection } from "@/components/custom/experience-section";
+import { Footer } from "@/components/custom/footer";
+import Hero from "@/components/custom/hero";
+import { Navigation } from "@/components/custom/navigation";
+import { ProjectsSection } from "@/components/custom/projects";
+import { ServicesSection } from "@/components/custom/services-section";
+import { SkillsSection } from "@/components/custom/skills-section";
+import { TestimonialsSection } from "@/components/custom/testimonials-section";
+import TopBeam from "@/components/custom/top-beam";
+import { GridBeams } from "@/components/magicui/grid-beams";
+import { Button } from "@/components/ui/button";
+import { Spotlight } from "@/components/ui/spotlight-new";
+import ThemeToggleButton from "@/components/ui/theme-toggle-button";
+import {
+  Code,
+  ArrowRight
+} from 'lucide-react'
+import { MeshGradient, DotOrbit } from '@paper-design/shaders-react';
+import PulsingBorderShader from "@/components/custom/chunks/pulsing-border-shader";
 
-const POSTS_QUERY = `*[
-  _type == "project"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
-
-const options = { next: { revalidate: 30 } };
-
+{/* <div className="relative h-svh w-full border-b border-border pb-px overflow-hidden md:overflow-x-hidden">
+  <div className="relative w-full h-full">
+    <div className="mx-auto w-full px-6 xl:max-w-7xl flex h-full flex-col">
+      <div
+        className="absolute -inset-y-[25%] -right-24 flex w-[100vw] flex-col xl:-right-6 xl:w-[1200px]"
+        style={{
+          maskImage:
+            'linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255))',
+          opacity: 1,
+          transform: 'none',
+        }}
+      >
+        <div className="flex flex-col w-full h-full blur">
+          <div
+            className="grow"
+            style={{
+              background:
+                'conic-gradient(from 180deg at 99% 40% in lab, rgb(255, 255, 255) 18deg, #8b5cf6 36deg, rgba(17, 17, 17, 0) 90deg, rgba(17, 17, 17, 0) 342deg, rgb(255, 255, 255) 360deg)',
+            }}
+          ></div>
+          <div
+            className="grow"
+            style={{
+              background:
+                'conic-gradient(from 0deg at 99% 60% in lab, rgb(255, 255, 255) 0deg, rgba(17, 17, 17, 0) 18deg, rgba(17, 17, 17, 0) 270deg, #8b5cf6 324deg, rgb(255, 255, 255) 342deg)',
+            }}
+          ></div>
+        </div>
+        <canvas
+          className="absolute inset-0 h-full w-full"
+          width="0"
+          height="0"
+          style={{ display: 'none' }}
+        ></canvas>
+      </div>
+    </div>
+  </div>
+</div> */}
 export default async function IndexPage() {
-  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
-
   return (
-    <main className="container mx-auto min-h-screen max-w-3xl p-8">
-      <h1 className="text-4xl font-bold mb-8">Projects</h1>
-        <ul className="flex flex-col gap-y-4">
-          {posts.map((post) => (
-            <li className="hover:underline" key={post._id}>
-              <Link href={`/${post.slug.current}`}>
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-    </main>
+    <div className="min-h-screen w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <Spotlight />
+
+      <div className="container mx-auto px-6 flex flex-col gap-20 pb-20 relative">
+        <Navigation />
+        <Hero />
+        <About />
+        <TimelineSection />
+        <SkillsSection />
+        <ProjectsSection />
+
+      </div>
+    </div>
   );
 }
