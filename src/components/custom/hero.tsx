@@ -6,6 +6,13 @@ import MagicText from './chunks/magic-text';
 import AnimatedSection from './animated-section';
 
 export default function Hero() {
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <AnimatedSection
       type="fadeInLeft"
@@ -56,10 +63,10 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-4 justify-center relative">
-            <Button size="lg" className="w-fit relative">
+            <Button size="lg" className="w-fit relative" onClick={() => scrollToSection('projects')}>
               View Projects
             </Button>
-            <Button size="lg" variant="outline" className="w-fit relative">
+            <Button size="lg" variant="outline" className="w-fit relative" onClick={() => scrollToSection('contact')}>
               Contact
             </Button>
           </div>

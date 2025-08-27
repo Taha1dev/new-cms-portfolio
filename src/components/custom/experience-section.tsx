@@ -53,6 +53,7 @@ export const TimelineSection = () => {
     <section
       className="py-20 mb-10"
       aria-labelledby="timeline-heading"
+      id="experience"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header

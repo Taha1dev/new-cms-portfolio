@@ -6,6 +6,7 @@ import { Menu, X, Code, User, Briefcase, Mail, Star, Settings } from "lucide-rea
 import ThemeToggleButton from "../ui/theme-toggle-button"
 import Image from "next/image"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [logoPath, setLogoPath] = useState<string>('/dark-logo.webp')
@@ -33,9 +34,9 @@ export function Navigation() {
                 bg-card/75 backdrop-blur-xl border border-border/60
                 shadow-lg px-6 py-3"
       >
-        <div className="flex items-center gap-2">
+        <Link href={''} className="flex items-center gap-2">
           <Image src={logoPath} className="w-12" alt="Logo" width={2334} height={1231} />
-        </div>
+        </Link>
 
         <div className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (

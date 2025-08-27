@@ -194,6 +194,7 @@ export function ServicesSection() {
   return (
     <motion.section
       className="relative py-20"
+      id="services"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
