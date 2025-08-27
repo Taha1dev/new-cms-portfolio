@@ -96,6 +96,8 @@ export const ProjectsSection = () => {
             <Card className="rounded-xl border-2 border-dashed border-border overflow-hidden hover:shadow-lg transition-all duration-300">
               <div className="relative overflow-hidden">
                 <Image
+                  width={300}
+                  height={160}
                   src={project.image || "/placeholder.svg"}
                   alt={project.name}
                   className="w-full h-40 sm:h-48 object-cover transition-transform duration-300 group-hover:scale-105"

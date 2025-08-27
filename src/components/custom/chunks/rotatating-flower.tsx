@@ -25,6 +25,8 @@ export default function RotatingFlower() {
         <Image
           src="/steel-flower.webp"
           alt="rotating flower"
+          width={200}
+          height={100}
           className="w-full opacity-80 select-none"
           draggable="false"
         />

@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 
 const reviews = [
   {
@@ -81,7 +82,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-semibold dark:text-white">
             {name}
