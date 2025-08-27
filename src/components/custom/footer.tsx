@@ -69,7 +69,7 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">Portfolio</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Crafting exceptional web experiences with modern technologies and clean, maintainable code. Let's build
+              Crafting exceptional web experiences with modern technologies and clean, maintainable code. Let&apos;s build
               something amazing together.
             </p>
             <div className="flex space-x-4">

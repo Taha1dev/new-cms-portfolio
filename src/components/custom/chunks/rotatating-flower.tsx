@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 import { useRef } from 'react'
 
 export default function RotatingFlower() {
@@ -21,7 +22,7 @@ export default function RotatingFlower() {
         style={{ rotate }}
         className="relative size-[450px] -translate-y-[-50%]"
       >
-        <img
+        <Image
           src="/steel-flower.webp"
           alt="rotating flower"
           className="w-full opacity-80 select-none"

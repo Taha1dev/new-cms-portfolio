@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin, Calendar, Github, Linkedin, Twitter } from "lucide-react";
-import AnimatedSection from "./animated-section";
+import { Mail, Phone, MapPin, Calendar, Github, Linkedin, } from "lucide-react";
+
 import { FlexibleGlobe } from "./chunks/contact-globe";
 import Medium from "./chunks/medium";
 
@@ -58,7 +58,7 @@ export default function ContactSection() {
             Get In <span className="text-main-600">Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Feel free to reach out through any of these channels. I'm always open to discussing new projects and opportunities.
+            Feel free to reach out through any of these channels. I&apos;m always open to discussing new projects and opportunities.
           </p>
         </div>
 

@@ -1,8 +1,6 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
 import MagicText from "./chunks/magic-text"
 import RotatingFlower from "./chunks/rotatating-flower"
 import Image from "next/image"
@@ -78,7 +76,7 @@ export function SkillsSection() {
           delay={0.1}
         >
           <div className="flex justify-center items-center flex-wrap gap-3">
-            {technologiesBySpecialization.map((tech, i) => (
+            {technologiesBySpecialization.map((tech,) => (
               <Badge
                 key={tech.id}
                 variant="secondary"

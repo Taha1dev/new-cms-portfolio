@@ -48,7 +48,7 @@ export default function Hero() {
           </h1>
 
           <div className="flex items-center justify-center gap-3 text-lg text-[var(--muted-foreground)]">
-            <span>Hello I'm Taha Al-Mulla</span>
+            <span>Hello I&apos;m Taha Al-Mulla</span>
             <div className="relative h-12 w-12 rounded-full overflow-hidden">
               <Image
                 src="/profile.jpg"

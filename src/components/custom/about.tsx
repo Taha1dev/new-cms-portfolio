@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import AnimatedSection from "./animated-section";
 import { Code2, Zap, Layout, ChevronRight, Sparkles } from "lucide-react";
 import { useState } from "react";
 
-// Define types for our data structures
 interface Skill {
   name: string;
 }

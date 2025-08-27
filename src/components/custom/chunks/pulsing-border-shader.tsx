@@ -1,4 +1,5 @@
-import { PulsingBorder, PulsingBorderProps } from "@paper-design/shaders-react"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { PulsingBorder } from "@paper-design/shaders-react"
 
 export default function PulsingBorderShader(props: any) {
   return (

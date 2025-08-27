@@ -6,13 +6,11 @@ export default function Lamp({ text }: { text: string }) {
   return (
     <>
       <div className="flex flex-col items-center justify-center h-40 bg-background relative overflow-hidden top-16">
-        {/* Radial gradient background - ADDED filter CLASS */}
         <div className="absolute top-16 w-[200px] h-[200px] rounded-full 
                         bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
                         bg-main-500
                         blur-[40px] opacity-80 filter"></div>
 
-        {/* Secondary radial gradient - ADDED filter CLASS */}
         <div className="absolute top-20 w-[120px] h-[120px] rounded-full 
                         bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
                         bg-main-500 

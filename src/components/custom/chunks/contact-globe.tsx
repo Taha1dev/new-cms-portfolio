@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
@@ -106,8 +108,8 @@ export function FlexibleGlobe() {
         transition={{ duration: 0.5 }}
         className="absolute top-10 z-20 flex flex-col items-center px-4"
       >
-        <h2 className="text-card-foreground text-xl md:text-2xl font-bold text-center bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-          I'm very flexible with time<br />zone communications
+        <h2 className="text-card-foreground text-xl md:text-2xl font-bold text-center bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text">
+          I&apos;m very flexible with time<br />zone communications
         </h2>
         <motion.div
           className="flex space-x-2 mt-4"

@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import { Badge } from "../ui/badge"
-import { Rocket, Building, Users, Award, PersonStanding, Code2, Globe } from "lucide-react"
+import { Rocket, Users, Code2, Globe } from "lucide-react"
 import { useState } from "react"
 import { motion } from 'framer-motion'
 

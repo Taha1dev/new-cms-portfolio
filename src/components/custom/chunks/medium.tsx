@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const Medium = ({ className }: { className: any }) => {
   return (
     <svg
