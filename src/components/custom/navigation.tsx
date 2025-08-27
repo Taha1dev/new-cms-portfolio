@@ -8,7 +8,7 @@ import Image from "next/image"
 import { useTheme } from "next-themes"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [logoPath, setLogoPath] = useState<string>('/light-logo.webp')
+  const [logoPath, setLogoPath] = useState<string>('/dark-logo.webp')
   const { theme } = useTheme()
 
   useEffect(() => {
@@ -27,11 +27,11 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-4 z-50 flex justify-center">
+    <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center">
       <div
         className="flex items-center justify-between w-[90%] md:w-[80%] rounded-full
-                  bg-[var(--background)]/70 backdrop-blur-xl border border-border/60
-                  shadow-lg px-6 py-3"
+                bg-card/75 backdrop-blur-xl border border-border/60
+                shadow-lg px-6 py-3"
       >
         <div className="flex items-center gap-2">
           <Image src={logoPath} className="w-12" alt="Logo" width={2334} height={1231} />

@@ -1,187 +1,136 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/magicui/marquee";
+import { motion } from "framer-motion";
 
-export function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+const reviews = [
+  {
+    name: "Majd Salman",
+    username: "General Manager - Injaz Tech",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Maysaa Al Ahmar",
+    username: "@jaasdmes",
+    body: "Absolutely blown away by the quality and dedication.",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Lama Youzghatli",
+    username: "@jaasdames",
+    body: "Professional, reliable, and very talented. Highly recommended!",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Ayham Al-jasem",
+    username: "Tech Staff - Injaz Tech",
+    body: "Delivered beyond expectations. I’m speechless!",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Imad Totnji",
+    username: "CTO - Injaz Tech",
+    body: "The attention to detail is outstanding. Great work!",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "AbuBaker Hawarneih",
+    username: "CTO - Projtech",
+    body: "Amazing collaboration and results every time.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Shadi Musharraf",
+    username: "@je12nny",
+    body: "Top-notch experience from start to finish.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "Waseem Madi",
+    username: "@jaasdasddasmes",
+    body: "Consistently exceeds expectations. Highly skilled!",
+    img: "https://avatar.vercel.sh/james",
+  },
+];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Product Manager",
-      company: "TechStart Inc.",
-      avatar: "/professional-man.png",
-      rating: 5,
-      text: "Working with this developer was an absolute pleasure. They delivered a pixel-perfect, responsive website that exceeded our expectations. The attention to detail and communication throughout the project was outstanding.",
-      project: "E-commerce Platform",
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO",
-      company: "Digital Solutions",
-      avatar: "/professional-man.png",
-      rating: 5,
-      text: "The quality of work and professionalism is top-notch. Our web application performance improved by 40% after the optimization work. I highly recommend their services for any frontend development needs.",
-      project: "Performance Optimization",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Marketing Director",
-      company: "Creative Agency",
-      avatar: "/professional-man.png",
-      rating: 5,
-      text: "They transformed our outdated website into a modern, user-friendly platform that our customers love. The project was completed on time and within budget. Excellent work!",
-      project: "Website Redesign",
-    },
-    {
-      name: "David Thompson",
-      role: "Startup Founder",
-      company: "InnovateLab",
-      avatar: "/professional-man.png",
-      rating: 5,
-      text: "As a non-technical founder, I needed someone who could translate my vision into reality. They not only built exactly what I wanted but also provided valuable insights that improved the final product.",
-      project: "MVP Development",
-    },
-    {
-      name: "Lisa Park",
-      role: "UX Designer",
-      company: "Design Studio",
-      avatar: "/professional-man.png",
-      rating: 5,
-      text: "Collaborating on this project was seamless. They perfectly implemented our designs and even suggested improvements that enhanced the user experience. A true professional!",
-      project: "Design Implementation",
-    },
-  ]
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  // Auto-advance testimonials
-  useEffect(() => {
-    const interval = setInterval(nextTestimonial, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
   return (
-    <section id="testimonials" className="relative py-24 bg-background">
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-40"></div>
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent opacity-20 blur-sm"></div>
-
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Client Testimonials</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take my word for it. Here's what clients say about working with me.
-          </p>
-        </div>
-
-        <div className="relative">
-          <Card className="border border-border bg-card shadow-lg">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex items-center justify-center mb-8">
-                <Quote className="w-12 h-12 text-pink-500 opacity-50" />
-              </div>
-
-              <div className="text-center mb-8">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-
-                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 font-medium">
-                  "{testimonials[currentIndex].text}"
-                </blockquote>
-
-                <div className="flex items-center justify-center space-x-4">
-                  <Avatar className="w-16 h-16">
-                    <AvatarImage
-                      src={testimonials[currentIndex].avatar || "/placeholder.svg"}
-                      alt={testimonials[currentIndex].name}
-                    />
-                    <AvatarFallback className="bg-pink-600 text-white text-lg">
-                      {testimonials[currentIndex].name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
-
-                  <div className="text-left">
-                    <h4 className="font-semibold text-foreground text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-muted-foreground">{testimonials[currentIndex].role}</p>
-                    <p className="text-muted-foreground font-medium">{testimonials[currentIndex].company}</p>
-                  </div>
-                </div>
-
-                <Badge
-                  variant="secondary"
-                  className="mt-4 bg-pink-100 text-pink-700 dark:bg-pink-900 dark:text-pink-300"
-                >
-                  {testimonials[currentIndex].project}
-                </Badge>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Navigation Buttons */}
-          <div className="flex justify-center space-x-4 mt-8">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={prevTestimonial}
-              className="border-border hover:bg-muted bg-transparent"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-
-            <div className="flex space-x-2 items-center">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? "bg-pink-500" : "bg-muted-foreground/30"
-                    }`}
-                />
-              ))}
-            </div>
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={nextTestimonial}
-              className="border-border hover:bg-muted bg-transparent"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-          {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "25+", label: "Happy Clients" },
-            { number: "3+", label: "Years Experience" },
-            { number: "100%", label: "Client Satisfaction" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-600 mb-2">{stat.number}</div>
-              <div className="text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
+    <figure
+      className={cn(
+        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-colors duration-300",
+        // light
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-semibold dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium text-muted-foreground">{username}</p>
         </div>
       </div>
+      <blockquote className="mt-3 text-sm leading-snug">{body}</blockquote>
+    </figure>
+  );
+};
+
+export function MarqueeDemo() {
+  return (
+    <section
+      id="testimonials"
+      className="relative flex w-full flex-col items-center justify-center overflow-hidden py-20"
+    >
+      {/* Header */}
+      <motion.div
+        className="mb-10 text-center max-w-2xl"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <p className="text-sm font-semibold tracking-wide text-muted-foreground uppercase mb-2">
+          Testimonials
+        </p>
+        <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-main-500 animate-gradient-x">
+          What People Say About Working With Me
+        </h2>
+
+      </motion.div>
+
+      {/* Marquee Rows */}
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+
+      {/* Gradient Fades */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </section>
-  )
+  );
 }

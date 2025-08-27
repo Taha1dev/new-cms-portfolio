@@ -18,19 +18,19 @@ export default function Hero() {
 
           <span
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full
-            border bg-emerald-100 dark:bg-emerald-500/15 backdrop-blur-sm
-            text-emerald-700 dark:text-emerald-400 font-medium text-sm
-            shadow-md shadow-emerald-200/50 dark:shadow-emerald-500/10 
-            hover:shadow-lg hover:shadow-emerald-300/30 dark:hover:shadow-emerald-500/20
+            border bg-main-100 dark:bg-main-500/15 backdrop-blur-sm
+            text-main-700 font-medium text-sm
+            shadow-md shadow-main-200/50 dark:shadow-main-500/10 
+            hover:shadow-lg hover:shadow-main-300/30 dark:hover:shadow-main-500/20
             transition-all duration-300
-            border-emerald-300 dark:border-emerald-500/40
+            border-main-300 dark:border-main-700/40
             group cursor-pointer"
           >
             <div className="relative flex h-3 w-3 items-center justify-center">
-              <div className="absolute h-3 w-3 animate-ping rounded-full bg-emerald-500/60 dark:bg-emerald-400/80"></div>
-              <div className="h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></div>
+              <div className="absolute h-3 w-3 animate-ping rounded-full bg-main-500/60 dark:bg-main-400/80"></div>
+              <div className="h-2 w-2 rounded-full bg-main-600 dark:bg-main-400"></div>
             </div>
-            <span className="text-emerald-800 dark:text-emerald-300 group-hover:text-emerald-900 dark:group-hover:text-emerald-200 transition-colors">
+            <span className="text-main-800 dark:text-main-300 group-hover:text-main-900 dark:group-hover:text-main-200 transition-colors">
               Available for new opportunities!
             </span>
           </span>

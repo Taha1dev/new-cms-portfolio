@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`${geistSans.className} antialiased relative selection:bg-purple-600/20 selection:text-purple-400`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
         >
           {children}

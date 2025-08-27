@@ -1,4 +1,3 @@
-// utils/animations.ts
 import { Variants, Transition } from 'framer-motion';
 
 export type AnimationType =
@@ -61,7 +60,7 @@ export const getAnimationVariants = (config: AnimationConfig): Variants => {
 
     case 'fadeInDown':
       return {
-        hidden: { opacity: 0, y:180 },
+        hidden: { opacity: 0, y: 180 },
         visible: {
           opacity: 1,
           y: 0,

@@ -8,7 +8,7 @@ import { Navigation } from "@/components/custom/navigation";
 import { ProjectsSection } from "@/components/custom/projects";
 import { ServicesSection } from "@/components/custom/services-section";
 import { SkillsSection } from "@/components/custom/skills-section";
-import { TestimonialsSection } from "@/components/custom/testimonials-section";
+import { MarqueeDemo, } from "@/components/custom/testimonials-section";
 import TopBeam from "@/components/custom/top-beam";
 import { GridBeams } from "@/components/magicui/grid-beams";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,10 @@ import {
 } from 'lucide-react'
 import { MeshGradient, DotOrbit } from '@paper-design/shaders-react';
 import PulsingBorderShader from "@/components/custom/chunks/pulsing-border-shader";
+import { SparklesPreview } from "@/components/custom/chunks/sparkles";
+import ContactSection from "@/components/custom/contact";
+import LampHero from "@/components/custom/chunks/lamp-ex";
+import { ScrollBasedVelocity } from "@/components/custom/scroll-section";
 
 {/* <div className="relative h-svh w-full border-b border-border pb-px overflow-hidden md:overflow-x-hidden">
   <div className="relative w-full h-full">
@@ -63,14 +67,26 @@ export default async function IndexPage() {
   return (
     <div className="min-h-screen w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Spotlight />
+      <Navigation />
 
-      <div className="container mx-auto px-6 flex flex-col gap-20 pb-20 relative">
-        <Navigation />
+      <div className="container mx-auto px-6 flex flex-col py-20 pt-24 relative">
         <Hero />
         <About />
         <TimelineSection />
         <SkillsSection />
+        <ScrollBasedVelocity />
+        <ServicesSection />
         <ProjectsSection />
+        <div>
+          {/* <SparklesPreview /> */}
+          <MarqueeDemo />
+        </div>
+        <div className="relative">
+          <div className="absolute h-20 w-full bg-background top-0 z-10"></div>
+          <TopBeam />
+        </div>
+        <ContactSection />
+        {/* <LampHero /> */}
 
       </div>
     </div>
