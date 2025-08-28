@@ -2,27 +2,28 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Code, User, Briefcase, Mail, Star, Settings } from "lucide-react"
+import { Menu, X, Code, User, Briefcase, Mail, Star, Settings, Computer } from "lucide-react"
 import ThemeToggleButton from "../ui/theme-toggle-button"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [logoPath, setLogoPath] = useState<string>('/dark-logo.webp')
-  const { theme } = useTheme()
+const [logoPath, setLogoPath] = useState<string>('/dark-logo.webp')
+const { theme } = useTheme()
 
-  useEffect(() => {
-    const savedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
-    const effectiveTheme = savedTheme || theme
+useEffect(() => {
+  const savedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
+  const effectiveTheme = savedTheme || theme
 
-    setLogoPath(effectiveTheme === 'dark' ? '/dark-logo.webp' : '/light-logo.webp')
-  }, [theme])
+  setLogoPath(effectiveTheme === 'dark' ? '/dark-logo.webp' : '/light-logo.webp')
+}, [theme])
   const navItems = [
     { name: "About", href: "#about", icon: User },
+    { name: "Experience", href: "#experience", icon: Briefcase },
     { name: "Skills", href: "#skills", icon: Code },
     { name: "Services", href: "#services", icon: Settings },
-    { name: "Experience", href: "#experience", icon: Briefcase },
+    { name: "Projects", href: "#projects", icon: Computer },
     { name: "Testimonials", href: "#testimonials", icon: Star },
     { name: "Contact", href: "#contact", icon: Mail },
   ]

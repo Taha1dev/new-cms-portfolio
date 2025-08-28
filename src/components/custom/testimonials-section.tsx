@@ -10,52 +10,53 @@ const reviews = [
   {
     name: "Majd Salman",
     username: "General Manager - Injaz Tech",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    body: "Taha is highly motivated, always learning, and constantly improving his skills. His initiatives bring real value.",
+    img: "/testimonials/4.webp",
   },
   {
     name: "Maysaa Al Ahmar",
-    username: "@jaasdmes",
-    body: "Absolutely blown away by the quality and dedication.",
-    img: "https://avatar.vercel.sh/james",
+    username: "Founder & CEO - Voila",
+    body: "I highly recommend Taha for his strong work ethic, commitment, and passion for continuous growth.",
+    img: "/testimonials/5.webp",
   },
   {
     name: "Lama Youzghatli",
-    username: "@jaasdames",
-    body: "Professional, reliable, and very talented. Highly recommended!",
-    img: "https://avatar.vercel.sh/james",
+    username: "Full Stack Developer - Voila",
+    body: "Your dedication and technical growth are truly impressive and will lead to a successful career.",
+    img: "/testimonials/7.webp",
   },
   {
     name: "Ayham Al-jasem",
-    username: "Tech Staff - Injaz Tech",
-    body: "Delivered beyond expectations. I’m speechless!",
-    img: "https://avatar.vercel.sh/jill",
+    username: "Software Supervisor - Injaz Tech", // Shortened
+    body: "Delivered beyond expectations with quality and speed. Great job!",
+    img: "/testimonials/1.webp",
   },
   {
     name: "Imad Totnji",
-    username: "CTO - Injaz Tech",
-    body: "The attention to detail is outstanding. Great work!",
-    img: "https://avatar.vercel.sh/john",
+    username: "Technical Manager - Injaz Tech",
+    body: "Taha is a rare talent—hardworking, adaptable, and constantly learning to deliver exceptional results.",
+    img: "/testimonials/3.webp",
   },
   {
     name: "AbuBaker Hawarneih",
     username: "CTO - Projtech",
-    body: "Amazing collaboration and results every time.",
-    img: "https://avatar.vercel.sh/jane",
+    body: "Taha's designs are modern, creative, and perfectly aligned with business needs. Great work every time!",
+    img: "/testimonials/2.webp",
   },
   {
     name: "Shadi Musharraf",
-    username: "@je12nny",
-    body: "Top-notch experience from start to finish.",
-    img: "https://avatar.vercel.sh/jenny",
+    username: "Media Producer",
+    body: "Taha's professionalism and technical expertise stand out—an absolute pleasure to work with.",
+    img: "/testimonials/8.webp",
   },
   {
     name: "Waseem Madi",
-    username: "@jaasdasddasmes",
-    body: "Consistently exceeds expectations. Highly skilled!",
-    img: "https://avatar.vercel.sh/james",
+    username: "Senior Technical Instructor",
+    body: "Your ambition and passion for tech will take you far. Keep pushing forward—you have great potential.",
+    img: "/testimonials/6.webp",
   },
 ];
+
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Mail, Phone, MapPin, Calendar, Github, Linkedin, } from "lucide-react";
 
 import { FlexibleGlobe } from "./chunks/contact-globe";
@@ -22,13 +23,13 @@ export default function ContactSection() {
       icon: MapPin,
       label: "Location",
       value: "Damascus, Syria",
-      link: "#",
+      link: null,
     },
     {
       icon: Calendar,
       label: "Availability",
       value: "Currently available for projects",
-      link: "#",
+      link: null,
     },
   ];
 
@@ -76,7 +77,7 @@ export default function ContactSection() {
                 return (
                   <a
                     key={index}
-                    href={item.link}
+                    href={item.link as any}
                     className="flex items-start gap-6 p-6 rounded-xl border border-border bg-card hover:border-main-600/30 transition-all duration-300 group"
                   >
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-main-600/10 border border-main-700/20 flex items-center justify-center group-hover:bg-main-600 group-hover:scale-110 transition-all duration-300">

@@ -11,6 +11,7 @@ import TopBeam from "@/components/custom/top-beam";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import ContactSection from "@/components/custom/contact";
 import { ScrollBasedVelocity } from "@/components/custom/scroll-section";
+import Footer from "@/components/custom/footer";
 
 
 export default async function IndexPage() {
@@ -39,6 +40,7 @@ export default async function IndexPage() {
         {/* <LampHero /> */}
 
       </div>
+      <Footer />
     </div>
   );
 }
