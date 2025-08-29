@@ -3,7 +3,7 @@ import About from "@/components/custom/about";
 import { TimelineSection } from "@/components/custom/experience-section";
 import Hero from "@/components/custom/hero";
 import { Navigation } from "@/components/custom/navigation";
-import { ProjectsSection } from "@/components/custom/projects";
+import ProjectsSection  from "@/components/custom/projects";
 import { ServicesSection } from "@/components/custom/services-section";
 import { SkillsSection } from "@/components/custom/skills-section";
 import { MarqueeDemo, } from "@/components/custom/testimonials-section";
