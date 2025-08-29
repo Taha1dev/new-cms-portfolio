@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Taha Al-Mulla Portfolio",
     images: [
       {
-        url: "https://cdn.tahamulla.me/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Taha Al-Mulla - Frontend Developer",

@@ -105,10 +105,18 @@ export function MarqueeDemo() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold tracking-wide text-muted-foreground mb-6 bg-card backdrop-blur-sm">
-          <span className="mr-2 h-2 w-2 rounded-full bg-purple-500" />
+          {/* <span className="mr-2 h-2 w-2 rounded-full bg-purple-500 animate-ping" /> */}
+          <span className="relative flex h-2 w-2 mr-2">
+            <span
+              className="animate-ping absolute inset-0 inline-flex h-full w-full rounded-full opacity-90 bg-purple-500"
+            />
+            <span
+              className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"
+            />
+          </span>
           TESTIMONIALS
         </div>
 

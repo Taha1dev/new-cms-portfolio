@@ -128,7 +128,7 @@ export function FlexibleGlobe() {
       </motion.div>
 
       {/* Globe */}
-      <div className="absolute top-1/4 -left-[7rem] w-[600px] h-[600px] z-10 scale-125 transition-transform duration-700 group-hover:scale-[1.35]">
+      <div className="absolute top-1/4 -left-[6rem] w-[600px] h-[600px] z-10 scale-130 transition-transform duration-700 group-hover:scale-[1.4]">
         <World data={glowingPoints} globeConfig={globeConfig} />
       </div>
 
