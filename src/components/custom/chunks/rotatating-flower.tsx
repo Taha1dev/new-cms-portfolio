@@ -16,7 +16,7 @@ export default function RotatingFlower() {
   return (
     <div
       ref={ref}
-      className="absolute -top-[20rem] left-0 w-full flex justify-center overflow-hidden pointer-events-none opacity-100 dark:opacity-50"
+      className="absolute -top-[20rem] lg:left-0 -left-10 w-full flex justify-center overflow-hidden pointer-events-none opacity-100 dark:opacity-50"
     >
       <motion.div
         style={{ rotate }}

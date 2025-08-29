@@ -238,7 +238,7 @@ export default function ProjectsSection() {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:underline"
+                            className="flex items-center gap-1.5 text-sm text-foreground hover:text-primary transition-colors duration-300 hover:underline"
                           >
                             <ExternalLink className="w-4 h-4" /> Live Demo
                           </Link>

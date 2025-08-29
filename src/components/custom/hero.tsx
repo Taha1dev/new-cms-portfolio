@@ -43,9 +43,10 @@ export default function Hero() {
             <MagicText text="Digital Experiences" />
           </h1>
 
-          <div className="flex items-center justify-center gap-3 text-lg text-[var(--muted-foreground)]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg text-muted-foreground text-center sm:text-left">
             <span>Hello I&apos;m Taha Al-Mulla</span>
-            <div className="relative h-12 w-12 rounded-full overflow-hidden">
+
+            <div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0">
               <Image
                 src="/profile.jpg"
                 alt="Taha"
@@ -53,10 +54,12 @@ export default function Hero() {
                 className="object-cover"
               />
             </div>
+
             <span>
               a Frontend Engineer focused on React, Next.js, and Angular
             </span>
           </div>
+
 
           <div className="flex gap-4 justify-center relative">
             <Button size="lg" className="w-fit relative" onClick={() => scrollToSection('projects')}>

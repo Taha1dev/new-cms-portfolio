@@ -99,7 +99,7 @@ export default function Footer() {
         {isVisible && (
           <Button
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 rounded-full w-12 h-12 shadow-lg border border-muted"
+            className="fixed bottom-6 right-6 rounded-full w-12 h-12 shadow-lg border border-muted z-20"
             size="icon"
           >
             <ArrowUp size={20} />
