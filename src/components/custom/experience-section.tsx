@@ -23,7 +23,7 @@ export const TimelineSection = () => {
     {
       year: "2023",
       title: "Junior Frontend Developer",
-      company: "Voali",
+      company: "Voila",
       description: "Joined first development team. Worked with Html, CSS and Boostrap,start learning nextjs and modern build tools.",
       type: "work",
       icon: Users,
